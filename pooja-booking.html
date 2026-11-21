@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Pooja & Archana Booking | Shree Siddhivinayak Mahalakshmi Dham</title>
+  <meta name="description" content="Book online Vedic poojas, Rudrabhishekams, Ganapati Homa, and Mahalakshmi Archanas with Sankalpa. Receive digital Darshan E-Pass.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Sacred Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="panchang-chip" id="panchang-display">🕉️ Loading Vedic Panchang...</span>
+        <span class="live-indicator"><span class="live-pulse"></span> Priest Roster Active</span>
+      </div>
+      <div class="top-bar-right js-auth-slot">
+        <span>📞 Pooja Office: +91 98200 12345</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Announcement Bar -->
+  <div class="marquee-bar">
+    <div class="container" style="display: flex; align-items: center; width: 100%;">
+      <span class="marquee-badge">Notice</span>
+      <div class="marquee-text-container">
+        <span class="marquee-text" id="live-announcement-text">
+          🙏 Sankalpa for all online bookings will be recited with your Gotra and family names during the morning Abhishek.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-emblem">🕉️</div>
+        <div class="brand-text">
+          <span class="brand-title">SHREE SIDDHIVINAYAK</span>
+          <span class="brand-subtitle">MAHALAKSHMI DHAM</span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="pushpa-bhandari-bhajan.html" class="nav-link" style="color: #dc2626; font-weight: 700;">📺 Pushpa Bhandari TV</a></li>
+        <li><a href="about.html" class="nav-link">About Mandir</a></li>
+        <li><a href="darshan.html" class="nav-link">Darshan & Timings</a></li>
+        <li><a href="pooja-booking.html" class="nav-link active">Online Poojas</a></li>
+        <li><a href="donation.html" class="nav-link">Donation & Seva</a></li>
+        <li><a href="events.html" class="nav-link">Festivals</a></li>
+        <li><a href="gallery.html" class="nav-link">Sacred Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Pilgrim Guide</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="sound-toggle-btn js-ring-bell" title="Ring Sacred Bell">🔔</button>
+        <a href="auth.html" class="btn btn-diya" style="padding: 0.5rem 0.9rem; font-size: 0.82rem;">👤 Register / Login</a>
+        <a href="donation.html" class="btn btn-primary">🙏 Seva / Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="donation-hero">
+    <div class="container" style="max-width: 860px;">
+      <span class="section-tag" style="background: rgba(212, 175, 55, 0.25); color: #fde047; border-color: #fde047;">
+        Vedic Rituals & Sacred Samskaras
+      </span>
+      <h1 style="font-family: var(--font-ornate); font-size: clamp(2rem, 4vw, 3.2rem); color: #fff; margin: 0.75rem 0 1rem;">
+        Online Pooja & Sankalpa
+      </h1>
+      <p style="font-size: 1.15rem; color: #f5f5f4; font-weight: 300;">
+        Book authentic Vedic rituals performed by learned temple priests. Even if you cannot visit in person, your family sankalpa and names will be chanted with reverence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pooja Selection & Booking Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Step 1: Choose Ritual</span>
+        <h2 class="section-title">Select Sacred Pooja or Homa</h2>
+        <div class="ornament-divider"><span>🪔</span></div>
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 3.5rem;">
+        <!-- Pooja 1 -->
+        <div class="seva-card pooja-select-card selected" data-pooja-name="Maha Rudrabhishekam & Sankalpa" data-pooja-price="2100">
+          <div class="seva-icon">🔱</div>
+          <h3 style="color: var(--sacred-maroon); font-size: 1.25rem;">Maha Rudrabhishekam</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0.5rem 0 1rem; flex: 1;">
+            Continuous chanting of Sri Rudram and Chamakam with 11 sacred dravyas. Purifies negative karma and brings divine health.
+          </p>
+          <div class="seva-price-tag">₹2,100</div>
+          <span style="font-size: 0.8rem; color: #15803d; font-weight: 700;">✓ Selected Ritual</span>
+        </div>
+
+        <!-- Pooja 2 -->
+        <div class="seva-card pooja-select-card" data-pooja-name="Shree Suktam & Mahalakshmi Archana" data-pooja-price="1100">
+          <div class="seva-icon">🌸</div>
+          <h3 style="color: var(--sacred-maroon); font-size: 1.25rem;">Mahalakshmi Archana</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0.5rem 0 1rem; flex: 1;">
+            Sacred Kumkumarchana and recitation of Shree Suktam and Lakshmi Ashtothram for prosperity, family harmony, and wealth.
+          </p>
+          <div class="seva-price-tag">₹1,100</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+
+        <!-- Pooja 3 -->
+        <div class="seva-card pooja-select-card" data-pooja-name="Sankatahara Ganapati Maha Homa" data-pooja-price="3500">
+          <div class="seva-icon">🔥</div>
+          <h3 style="color: var(--sacred-maroon); font-size: 1.25rem;">Ganapati Maha Homa</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0.5rem 0 1rem; flex: 1;">
+            Grand fire ritual with 108 sweet modaks, durva grass, and pure ghee offerings to eradicate all hurdles in career, business, or education.
+          </p>
+          <div class="seva-price-tag">₹3,500</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+
+        <!-- Pooja 4 -->
+        <div class="seva-card pooja-select-card" data-pooja-name="Navagraha Shanti & Dosha Nivarana" data-pooja-price="2500">
+          <div class="seva-icon">🪐</div>
+          <h3 style="color: var(--sacred-maroon); font-size: 1.25rem;">Navagraha Shanti Pooja</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0.5rem 0 1rem; flex: 1;">
+            Balances planetary alignments, removes Sade Sati and doshas, bringing auspicious planetary vibrations into life.
+          </p>
+          <div class="seva-price-tag">₹2,500</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+
+        <!-- Pooja 5 -->
+        <div class="seva-card pooja-select-card" data-pooja-name="Satyanarayan Maha Vrat Katha" data-pooja-price="1500">
+          <div class="seva-icon">📖</div>
+          <h3 style="color: var(--sacred-maroon); font-size: 1.25rem;">Satyanarayan Vrat Katha</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0.5rem 0 1rem; flex: 1;">
+            Complete recitation of the five sacred chapters from Skanda Purana with panchamrit prasad distribution for household prosperity.
+          </p>
+          <div class="seva-price-tag">₹1,500</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+
+        <!-- Pooja 6 -->
+        <div class="seva-card pooja-select-card" data-pooja-name="Nitya Sahasranama Archana" data-pooja-price="501">
+          <div class="seva-icon">🪷</div>
+          <h3 style="color: var(--sacred-maroon); font-size: 1.25rem;">Nitya Sahasranama Archana</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0.5rem 0 1rem; flex: 1;">
+            Chanting of the 1,000 sacred names with fresh lotus and bilva leaves offered individually at the lotus feet of the lord.
+          </p>
+          <div class="seva-price-tag">₹501</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="donation-form-wrapper" id="pooja-booking-section">
+        <div style="border-bottom: 2px solid var(--border-gold); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <h3 style="font-family: var(--font-display); color: var(--sacred-maroon); font-size: 1.5rem; margin-bottom: 0.25rem;">
+            Step 2: Enter Devotee & Sankalpa Information
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Selected Pooja: <strong id="booking-summary-pooja" style="color: var(--primary);">Maha Rudrabhishekam & Sankalpa</strong> &bull; Dakshina: <strong id="booking-summary-fee" style="color: var(--primary-dark);">₹2,100</strong>
+          </p>
+        </div>
+
+        <form id="pooja-booking-form">
+          <input type="hidden" id="selected-pooja-name" value="Maha Rudrabhishekam & Sankalpa">
+          <input type="hidden" id="selected-pooja-amount" value="2100">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="pooja-devotee-name">Devotee / Karta Full Name *</label>
+              <input type="text" id="pooja-devotee-name" class="form-control" required placeholder="e.g. Rameshwar Shastri" value="Mukesh Patel">
+            </div>
+
+            <div class="form-group">
+              <label for="pooja-phone">WhatsApp Mobile Number *</label>
+              <input type="tel" id="pooja-phone" class="form-control" required placeholder="+91 98200 XXXXX" value="+91 98199 77889">
+            </div>
+
+            <div class="form-group">
+              <label for="pooja-email">Email Address</label>
+              <input type="email" id="pooja-email" class="form-control" placeholder="devotee@example.com" value="mukesh.patel@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="pooja-gotra">Gotra</label>
+              <input type="text" id="pooja-gotra" class="form-control" placeholder="e.g. Kashyapa, Bharadwaj" value="Kashyapa">
+            </div>
+          </div>
+
+          <!-- Schedule & Priest Allocation -->
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="pooja-date">Select Date for Pooja *</label>
+              <input type="date" id="pooja-date" class="form-control" required value="2026-11-20">
+            </div>
+
+            <div class="form-group">
+              <label for="pooja-time-slot">Select Time Slot *</label>
+              <select id="pooja-time-slot" class="form-control">
+                <option value="06:30 AM - 08:00 AM (Morning Brahma Muhurat)">06:30 AM - 08:00 AM (Morning Brahma Muhurat)</option>
+                <option value="09:00 AM - 10:30 AM (Prabhat Slot)" selected>09:00 AM - 10:30 AM (Prabhat Slot)</option>
+                <option value="11:00 AM - 12:30 PM (Madhyahna Slot)">11:00 AM - 12:30 PM (Madhyahna Slot)</option>
+                <option value="05:30 PM - 07:00 PM (Pradosh Evening Slot)">05:30 PM - 07:00 PM (Pradosh Evening Slot)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="pooja-priest">Presiding Head Priest</label>
+              <select id="pooja-priest" class="form-control">
+                <option value="Pt. Ramkrishna Shastri (Chief Archak)">Pt. Ramkrishna Shastri (Chief Archak)</option>
+                <option value="Pt. Vidhyadhar Joshi (Veda Scholar)">Pt. Vidhyadhar Joshi (Veda Scholar)</option>
+                <option value="Pt. Narayana Bhat (Agama Expert)">Pt. Narayana Bhat (Agama Expert)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="pooja-members">Attending Family Members</label>
+              <input type="number" id="pooja-members" class="form-control" min="1" max="10" value="4">
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-gold btn-lg" style="padding: 1rem 3rem;">
+              Confirm Booking & Generate Darshan E-Pass 🪔
+            </button>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
+              Instant booking confirmation & Digital Pass provided.
+            </p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Darshan E-Pass Modal -->
+  <div class="modal-backdrop" id="pooja-pass-modal">
+    <div class="modal-box" style="max-width: 650px;">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="pooja-pass-content">
+        <!-- Rendered by pooja.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="temple-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <span style="font-size: 2rem;">🕉️</span>
+            <div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: #fff;">SHREE SIDDHIVINAYAK</div>
+              <div style="font-size: 0.75rem; color: var(--accent-gold); letter-spacing: 1px;">MAHALAKSHMI DHAM TRUST</div>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #a8a29e;">
+            Official 80G Tax-exempt charitable trust. Reg No. MH-MUM-TR-2024/9871A.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Devotee Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="darshan.html">Darshan Timings</a></li>
+            <li><a href="pooja-booking.html">Online Poojas</a></li>
+            <li><a href="donation.html">Donation & Seva</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Administration</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Mandir</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="pushpa-bhandari-bhajan.html">Bhajan Ganga TV</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Helpline</h4>
+          <p style="font-size: 0.85rem; color: #d6d3d1;">
+            📞 +91 (022) 2430-8911<br>
+            📧 trust@siddhivinayakdham.org<br>
+            Siddhivinayak Marg, Prabhadevi, Mumbai
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Shree Siddhivinayak Mahalakshmi Dham Trust. All Rights Reserved.</div>
+        <div><a href="#" class="js-ring-bell" style="color: #a8a29e;">Ring Sacred Bell 🔔</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating 3D Interactive Temple Bell -->
+  <div class="floating-3d-bell js-ring-bell" id="floating-3d-bell" title="Click to Ring Temple Bell">
+    <div class="bell-tooltip">🔔 Ring 3D Temple Bell</div>
+    <div class="bell-chain"></div>
+    <div class="bell-body-3d">🔔</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/database.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pooja.js"></script>
+  <script src="js/temple3d.js"></script>
+</body>
+</html>

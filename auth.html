@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devotee & Developer Portal | Register & Login | Shree Siddhivinayak Dham</title>
+  <meta name="description" content="Register and login to access personal pooja bookings, 80G tax receipts, devotee community, and developer dashboard.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .auth-page-wrapper {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      background: radial-gradient(circle at center, #2e0811 0%, #150307 80%, #0b0204 100%);
+      position: relative;
+    }
+
+    .auth-card-container {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 2px solid var(--accent-gold);
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 35px rgba(245, 158, 11, 0.2);
+      max-width: 540px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+
+    .auth-header {
+      background: var(--crimson-gradient);
+      color: #fff;
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+      border-bottom: 2px solid var(--accent-gold);
+      position: relative;
+    }
+
+    .auth-tab-bar {
+      display: flex;
+      background: #f1f5f9;
+      border-bottom: 1.5px solid var(--border-gold);
+    }
+
+    .auth-tab-btn {
+      flex: 1;
+      padding: 1rem 0.5rem;
+      font-weight: 700;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .auth-tab-btn.active {
+      background: #fff;
+      color: var(--primary);
+      border-bottom: 3px solid var(--primary);
+    }
+
+    .auth-body {
+      padding: 2rem 2.25rem;
+    }
+
+    .auth-alert-box {
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      font-size: 0.85rem;
+      margin-bottom: 1.25rem;
+      display: none;
+    }
+
+    .auth-alert-error {
+      background: #fef2f2;
+      border: 1px solid #fecdd3;
+      color: #b91c1c;
+    }
+
+    .auth-alert-success {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #15803d;
+    }
+
+    .demo-creds-box {
+      background: #fffdf8;
+      border: 1px dashed var(--accent-gold);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="panchang-chip" id="panchang-display">🕉️ Loading Vedic Panchang...</span>
+        <span class="live-indicator"><span class="live-pulse"></span> Devotee Auth Portal</span>
+      </div>
+      <div class="top-bar-right">
+        <span>📞 Helpline: +91 98200 12345</span>
+        <a href="index.html" style="color: #fde047; font-weight: 600;">← Back to Mandir Website</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-emblem">🕉️</div>
+        <div class="brand-text">
+          <span class="brand-title">SHREE SIDDHIVINAYAK</span>
+          <span class="brand-subtitle">MAHALAKSHMI DHAM</span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="pushpa-bhandari-bhajan.html" class="nav-link" style="color: #dc2626; font-weight: 700;">📺 Pushpa Bhandari TV</a></li>
+        <li><a href="darshan.html" class="nav-link">Darshan & Timings</a></li>
+        <li><a href="pooja-booking.html" class="nav-link">Online Poojas</a></li>
+        <li><a href="donation.html" class="nav-link">Donation & Seva</a></li>
+        <li><a href="events.html" class="nav-link">Festivals</a></li>
+        <li><a href="gallery.html" class="nav-link">Sacred Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Mandir</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="sound-toggle-btn js-ring-bell" title="Ring Sacred Bell">🔔</button>
+        <a href="donation.html" class="btn btn-primary">🙏 Seva / Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Auth Main Section -->
+  <div class="auth-page-wrapper">
+    <div class="auth-card-container">
+      
+      <!-- Card Header -->
+      <div class="auth-header">
+        <div style="font-size: 2.2rem; margin-bottom: 0.25rem;">🕉️</div>
+        <h2 style="font-family: var(--font-ornate); font-size: 1.6rem; color: #fff; margin: 0;">
+          Sanctum Access Portal
+        </h2>
+        <p style="font-size: 0.82rem; color: #fef08a; margin: 0.25rem 0 0;">
+          Register first to access personal bookings, receipts, or developer controls
+        </p>
+      </div>
+
+      <!-- Auth Tab Bar (Register First, Then Login) -->
+      <div class="auth-tab-bar">
+        <button class="auth-tab-btn active" id="tab-register-btn">
+          <span>📝 1. Register Account</span>
+        </button>
+        <button class="auth-tab-btn" id="tab-login-btn">
+          <span>🔑 2. Login</span>
+        </button>
+      </div>
+
+      <!-- Card Body -->
+      <div class="auth-body">
+        
+        <!-- Alerts -->
+        <div class="auth-alert-box auth-alert-error" id="auth-error-msg"></div>
+        <div class="auth-alert-box auth-alert-success" id="auth-success-msg"></div>
+
+        <!-- ================================================================
+             REGISTER FORM (DEFAULT FIRST)
+             ================================================================ -->
+        <form id="form-register">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="reg-name">Full Name (पूरा नाम) *</label>
+            <input type="text" id="reg-name" class="form-control" placeholder="e.g. Mayank Bhandari" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="reg-phone">Mobile / WhatsApp Number *</label>
+            <input type="tel" id="reg-phone" class="form-control" placeholder="e.g. 9820012345" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="reg-email">Email Address *</label>
+            <input type="email" id="reg-email" class="form-control" placeholder="e.g. devotee@example.com" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="reg-role">Account Type (खाते का प्रकार) *</label>
+            <select id="reg-role" class="form-control">
+              <option value="Devotee" selected>🙏 Devotee (भक्त / सामान्य दर्शन)</option>
+              <option value="Trustee">🏛️ Temple Trustee / Committee Member</option>
+              <option value="Developer">⚙️ Developer / Tech Admin (Dashboard Access)</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="reg-password">Create Secure Password *</label>
+            <input type="password" id="reg-password" class="form-control" placeholder="Minimum 4 characters" required minlength="4">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label for="reg-password-confirm">Confirm Password *</label>
+            <input type="password" id="reg-password-confirm" class="form-control" placeholder="Re-enter password" required minlength="4">
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+            <input type="checkbox" id="reg-agree" required checked style="margin-top: 3px;">
+            <label for="reg-agree">I agree to the Mandir Trust guidelines, code of conduct, and terms of service.</label>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-lg" style="width: 100%; font-size: 1.05rem;">
+            ✨ Register Account & Proceed to Login
+          </button>
+
+          <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem;">
+            Already have an account? <a href="#" id="link-goto-login" style="color: var(--primary); font-weight: 700;">Login here →</a>
+          </p>
+        </form>
+
+        <!-- ================================================================
+             LOGIN FORM
+             ================================================================ -->
+        <form id="form-login" style="display: none;">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label for="login-identifier">Email Address or Mobile Number *</label>
+            <input type="text" id="login-identifier" class="form-control" placeholder="e.g. developer@siddhivinayakdham.org or 9820012345" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <label for="login-password">Password *</label>
+              <span id="btn-toggle-pwd" style="font-size: 0.78rem; color: var(--primary); cursor: pointer; font-weight: 600;">👁️ Show</span>
+            </div>
+            <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; font-size: 1.05rem;">
+            🙏 Login to Account
+          </button>
+
+          <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem;">
+            New to the temple portal? <a href="#" id="link-goto-register" style="color: var(--primary); font-weight: 700;">Register new account first →</a>
+          </p>
+
+          <!-- Quick Test Credentials for Client/Reviewer -->
+          <div class="demo-creds-box">
+            <div style="font-weight: 700; color: var(--sacred-maroon); margin-bottom: 0.35rem; display: flex; align-items: center; justify-content: space-between;">
+              <span>💡 Pre-configured Accounts:</span>
+              <button type="button" id="btn-autofill-dev" style="background: var(--gold-gradient); border: none; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.75rem; font-weight: 700; color: #1c1917; cursor: pointer;">
+                Autofill Developer
+              </button>
+            </div>
+            <div><strong>Developer:</strong> <code>developer@siddhivinayakdham.org</code> | Pass: <code>admin</code></div>
+            <div><strong>Trustee:</strong> <code>pushpabhandari6645@gmail.com</code> | Pass: <code>bhajan2026</code></div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating 3D Bell -->
+  <div class="floating-3d-bell js-ring-bell" id="floating-3d-bell" title="Click to Ring Temple Bell">
+    <div class="bell-tooltip">🔔 Ring 3D Temple Bell</div>
+    <div class="bell-chain"></div>
+    <div class="bell-body-3d">🔔</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/database.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

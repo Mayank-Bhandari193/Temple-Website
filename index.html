@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Siddhivinayak Mahalakshmi Dham | Sacred Mandir & Pilgrimage</title>
+  <meta name="description" content="Official website of Shree Siddhivinayak Mahalakshmi Dham. Experience Live Darshan, Online Pooja Booking, Sacred Seva & 80G Tax-exempt Donations.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Three.js for 3D Sacred Sanctum & WebGL Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Top Sacred Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="panchang-chip" id="panchang-display">
+          🕉️ Loading Vedic Panchang...
+        </span>
+        <span class="live-indicator">
+          <span class="live-pulse"></span> Sanctum Open | Live Darshan Active
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span>📞 Helpline: +91 98200 12345</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Announcement Ticker (Broadcasts in real-time from Developer Dashboard) -->
+  <div class="marquee-bar">
+    <div class="container" style="display: flex; align-items: center; width: 100%;">
+      <span class="marquee-badge">Sacred Notice</span>
+      <div class="marquee-text-container">
+        <span class="marquee-text" id="live-announcement-text">
+          🙏 Jai Shree Ganesh! Daily Maha Aarti live at 7:00 AM & 7:30 PM. Special Maha Shivaratri & Navratri Darshan registration is now open.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-emblem">🕉️</div>
+        <div class="brand-text">
+          <span class="brand-title">SHREE SIDDHIVINAYAK</span>
+          <span class="brand-subtitle">MAHALAKSHMI DHAM</span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="pushpa-bhandari-bhajan.html" class="nav-link" style="color: #dc2626; font-weight: 700;">📺 Pushpa Bhandari TV</a></li>
+        <li><a href="#sanctum-3d-section" class="nav-link" style="color: var(--primary-light); font-weight: 700;">✨ 3D Darshan</a></li>
+        <li><a href="about.html" class="nav-link">About Mandir</a></li>
+        <li><a href="darshan.html" class="nav-link">Darshan & Timings</a></li>
+        <li><a href="pooja-booking.html" class="nav-link">Online Poojas</a></li>
+        <li><a href="donation.html" class="nav-link">Donation & Seva</a></li>
+        <li><a href="events.html" class="nav-link">Festivals</a></li>
+        <li><a href="gallery.html" class="nav-link">Sacred Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Pilgrim Guide</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="sound-toggle-btn js-ring-bell" title="Ring Sacred Temple Bell">
+          🔔
+        </button>
+        <a href="auth.html" class="btn btn-diya" style="padding: 0.5rem 0.9rem; font-size: 0.82rem;">
+          👤 Register / Login
+        </a>
+        <a href="donation.html" class="btn btn-primary">
+          🙏 Seva / Donate
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Grand Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay-gold"></div>
+    <div class="hero-content">
+      <div class="hero-shloka font-sanskrit">
+        ॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ । निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+      </div>
+      <h1 class="hero-title">
+        The Abode of <span>Supreme Grace</span> & Divine Blessings
+      </h1>
+      <p class="hero-desc">
+        Welcome to Shree Siddhivinayak Mahalakshmi Dham. Immerse yourself in eternal spirituality, partake in sacred Nitya Sevas, book online Archanas, and seek divine benediction from the comfort of your home.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="donation.html" class="btn btn-gold btn-lg">
+          🙏 Offer Seva & Annadanam
+        </a>
+        <a href="pooja-booking.html" class="btn btn-primary btn-lg">
+          🪔 Book Online Archana
+        </a>
+        <a href="darshan.html" class="btn btn-outline-gold btn-lg" style="color: #fff; border-color: #fff;">
+          ⏰ Darshan Timings
+        </a>
+      </div>
+
+      <!-- Darshan Ticker Banner -->
+      <div class="darshan-ticker-card">
+        <div class="ticker-item">
+          <div class="ticker-icon">🌅</div>
+          <div>
+            <div class="ticker-label">Morning Kakad Aarti</div>
+            <div class="ticker-value">05:30 AM - 06:15 AM</div>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <div class="ticker-icon">☀️</div>
+          <div>
+            <div class="ticker-label">Maha Bhog & Naivedya</div>
+            <div class="ticker-value">12:15 PM - 01:00 PM</div>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <div class="ticker-icon">🌆</div>
+          <div>
+            <div class="ticker-label">Sandhya Maha Aarti</div>
+            <div class="ticker-value">07:30 PM - 08:30 PM</div>
+          </div>
+        </div>
+        <div class="ticker-item">
+          <div class="ticker-icon">🌙</div>
+          <div>
+            <div class="ticker-label">Mandir Closure (Shayan)</div>
+            <div class="ticker-value">09:45 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Virtual Aarti & Diya Lighting Station -->
+  <section class="virtual-darshan-bar" id="virtual-diya-section">
+    <div class="container">
+      <div class="section-tag">Interactive Devotion</div>
+      <h2 style="font-size: 2rem; color: var(--sacred-maroon); margin-bottom: 0.5rem;">
+        Light a Sacred Diya & Offer Pushpanjali
+      </h2>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+        Offer your reverence to the presiding deities. Light a digital lamp, ring the temple brass bell, and shower auspicious flowers.
+      </p>
+
+      <div class="diya-display-box">
+        <div class="diya-flame-wrapper">
+          <div class="diya-icon" id="diya-icon-element">🪔</div>
+        </div>
+        <div style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--sacred-maroon); margin-bottom: 0.5rem;">
+          <span id="diya-count">1,428</span> Diyas Lit by Devotees Today
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          Click below to light your diya and invoke prosperity, health, and spiritual peace.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-gold btn-lg" id="btn-light-diya">
+            🪔 Light Digital Diya
+          </button>
+          <button class="btn btn-primary btn-lg" id="btn-offer-flowers">
+            🌸 Offer Flower Shower (Pushpanjali)
+          </button>
+          <button class="btn btn-outline-gold js-ring-bell">
+            🔔 Ring Mandir Ghanti
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3D SACRED SANCTUM & REAL-TIME WEBGL DARSHAN EXPERIENCE
+       ========================================================================== -->
+  <section class="sanctum-3d-section" id="sanctum-3d-section">
+    <div class="container">
+      <div class="section-header" style="color: #fff;">
+        <span class="section-tag" style="background: rgba(245, 158, 11, 0.2); color: #fde047; border-color: #f59e0b;">
+          अलौकिक 3D दर्शन Experience
+        </span>
+        <h2 class="section-title" style="color: #fff;">Interactive 3D Temple Sanctum</h2>
+        <div class="ornament-divider"><span>☸</span></div>
+        <p class="section-subtitle" style="color: #e2e8f0;">
+          360° Real-time 3D Darshan of the Sacred Kalash & Akhand Jyoti. Drag mouse / swipe to rotate, perform 3D Aarti Parikrama, and offer virtual Pushpanjali.
+        </p>
+      </div>
+
+      <div class="sanctum-3d-frame">
+        <!-- 3D Canvas Box -->
+        <div class="sanctum-3d-canvas-container" id="sanctum-3d-canvas-container">
+          <!-- WebGL Three.js / Canvas Engine injects here -->
+        </div>
+
+        <!-- 3D Interaction Toolbar -->
+        <div class="sanctum-3d-toolbar">
+          <button class="control-chip-btn active" id="btn-trigger-3d-aarti">
+            🪔 Perform 3D Aarti
+          </button>
+          <button class="control-chip-btn" id="btn-trigger-3d-flowers">
+            🌸 3D Pushpanjali Shower
+          </button>
+          <button class="control-chip-btn active" data-3d-lighting="gold">
+            ☀️ Gold Sunlight
+          </button>
+          <button class="control-chip-btn" data-3d-lighting="sandhya">
+            🌆 Sandhya Glow
+          </button>
+          <button class="control-chip-btn" data-3d-lighting="night">
+            🌙 Night Aarti
+          </button>
+          <span style="font-size: 0.78rem; color: #fbbf24; margin-left: 0.5rem; font-weight: 600;" id="aarti-3d-status">
+            ✥ Drag mouse to rotate 360°
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sacred Shrines & Deities Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sacred Sanctums</span>
+        <h2 class="section-title">The Divine Presiding Deities</h2>
+        <div class="ornament-divider"><span>☸</span></div>
+        <p class="section-subtitle">
+          Established centuries ago, the sanctum sanctorum houses self-manifested (Swayambhu) murtis emitting sublime cosmic energy.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Deity 1 -->
+        <div class="temple-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1567591370504-8b631d575459?q=80&w=800&auto=format&fit=crop" alt="Shree Siddhivinayak">
+            <span class="card-badge">Chief Sanctum</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Shree Siddhivinayak Ganesha</h3>
+            <p class="card-text">
+              The supreme remover of obstacles and granter of intellect and prosperity. Devotees from across the globe visit to seek fulfillment of their heartfelt wishes.
+            </p>
+            <div class="card-footer">
+              <span style="font-weight: 700; color: var(--primary); font-size: 0.85rem;">Pratham Pujya</span>
+              <a href="pooja-booking.html" class="btn btn-sm btn-primary">Book Archana →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deity 2 -->
+        <div class="temple-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800&auto=format&fit=crop" alt="Maha Lakshmi Devi">
+            <span class="card-badge">Abundance & Fortune</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Mata Mahalakshmi Devi</h3>
+            <p class="card-text">
+              The supreme goddess of wealth, fortune, auspiciousness, and spiritual abundance. Special Kumkumarchana and Shree Suktam rituals performed daily.
+            </p>
+            <div class="card-footer">
+              <span style="font-weight: 700; color: var(--primary); font-size: 0.85rem;">Ashta Lakshmi Rupa</span>
+              <a href="pooja-booking.html" class="btn btn-sm btn-primary">Book Archana →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deity 3 -->
+        <div class="temple-card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=800&auto=format&fit=crop" alt="Maha Rudra Shivalinga">
+            <span class="card-badge">Maha Kaleshwar</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Sri Narmadeshwar Mahadev</h3>
+            <p class="card-text">
+              Consecrated natural Narmada lingam where continuous Bhasma and Panchamrit Rudrabhishekam flows for universal peace and inner awakening.
+            </p>
+            <div class="card-footer">
+              <span style="font-weight: 700; color: var(--primary); font-size: 0.85rem;">Akhand Bilva Seva</span>
+              <a href="pooja-booking.html" class="btn btn-sm btn-primary">Book Archana →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Sevas & Quick Donation Showcase -->
+  <section class="section-padding" style="background: var(--bg-sand); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Punya Karma</span>
+        <h2 class="section-title">Sacred Sevas & Annadanam</h2>
+        <div class="ornament-divider"><span>🕉️</span></div>
+        <p class="section-subtitle">
+          "अन्नदानं महादानं विद्यादानं ततः परम्" — Partake in sacred offerings. Every contribution is recognized with an instant 80G tax-exempt certificate.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Seva 1 -->
+        <div class="seva-card">
+          <div class="seva-icon">🍲</div>
+          <h3 style="font-size: 1.25rem; color: var(--sacred-maroon);">Maha Annadanam Seva</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
+            Provide wholesome satvik Mahaprasad to hundreds of visiting pilgrims, sadhus, and underprivileged families every single day.
+          </p>
+          <div class="seva-price-tag">₹501 to ₹11,000</div>
+          <a href="donation.html" class="btn btn-primary" style="width: 100%;">
+            Sponsor Food Seva →
+          </a>
+        </div>
+
+        <!-- Seva 2 -->
+        <div class="seva-card">
+          <div class="seva-icon">🐄</div>
+          <h3 style="font-size: 1.25rem; color: var(--sacred-maroon);">Goshala & Gau Seva</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
+            Care for over 150 indigenous Gir and Sahiwal cows in the temple goshala with fresh green fodder, veterinary care, and shelter.
+          </p>
+          <div class="seva-price-tag">₹500 to ₹5,100</div>
+          <a href="donation.html" class="btn btn-primary" style="width: 100%;">
+            Support Goshala →
+          </a>
+        </div>
+
+        <!-- Seva 3 -->
+        <div class="seva-card">
+          <div class="seva-icon">🛕</div>
+          <h3 style="font-size: 1.25rem; color: var(--sacred-maroon);">Gopuram & Kalash Renovation</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; flex: 1;">
+            Contribute towards carved stone gopuram preservation, brass kalash gold-leaf plating, and eco-friendly solar temple lighting.
+          </p>
+          <div class="seva-price-tag">₹1,000 to ₹51,000</div>
+          <a href="donation.html" class="btn btn-primary" style="width: 100%;">
+            Contribute to Mandir →
+          </a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="donation.html" class="btn btn-gold btn-lg">
+          📜 View All Seva Offerings & Download 80G E-Receipt
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Today's Aarti Schedule -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nitya Seva</span>
+        <h2 class="section-title">Daily Aarti & Pooja Timings</h2>
+        <div class="ornament-divider"><span>🔔</span></div>
+        <p class="section-subtitle">
+          Devotees can participate in person or tune into our synchronized virtual prayers during these sacred hours.
+        </p>
+      </div>
+
+      <div style="background: #fff; border: 2px solid var(--border-gold); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);">
+        <div class="table-responsive">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+            <thead>
+              <tr style="background: var(--crimson-gradient); color: #fff;">
+                <th style="padding: 1rem 1.25rem;">Ritual Name</th>
+                <th style="padding: 1rem 1.25rem;">Sacred Timing</th>
+                <th style="padding: 1rem 1.25rem;">Significance</th>
+                <th style="padding: 1rem 1.25rem;">Public Darshan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--sacred-maroon);">Kakad Aarti & Suprabhatam</td>
+                <td style="padding: 1rem 1.25rem; color: var(--primary-dark); font-weight: 600;">05:30 AM – 06:15 AM</td>
+                <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">Awakening the deities with auspicious Vedic hymns</td>
+                <td style="padding: 1rem 1.25rem;"><span style="color: #15803d; font-weight: 700;">Open to All</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f1f5f9; background: #fffdf9;">
+                <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--sacred-maroon);">Panchamrit Maha Abhishek</td>
+                <td style="padding: 1rem 1.25rem; color: var(--primary-dark); font-weight: 600;">07:00 AM – 08:30 AM</td>
+                <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">Sacred bath with milk, honey, curd, ghee, and Ganga jal</td>
+                <td style="padding: 1rem 1.25rem;"><span style="color: #b45309; font-weight: 700;">By Registration</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--sacred-maroon);">Madhyahna Bhog & Naivedya Aarti</td>
+                <td style="padding: 1rem 1.25rem; color: var(--primary-dark); font-weight: 600;">12:00 PM – 12:45 PM</td>
+                <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">Offering of 56 delicacies (Chhappan Bhog) to Prabhu</td>
+                <td style="padding: 1rem 1.25rem;"><span style="color: #15803d; font-weight: 700;">Open to All</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f1f5f9; background: #fffdf9;">
+                <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--sacred-maroon);">Sandhya Maha Deepa Aarti</td>
+                <td style="padding: 1rem 1.25rem; color: var(--primary-dark); font-weight: 600;">07:30 PM – 08:30 PM</td>
+                <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">Grand evening illumination with 108 brass lamps and dhol</td>
+                <td style="padding: 1rem 1.25rem;"><span style="color: #15803d; font-weight: 700;">Grand Assembly</span></td>
+              </tr>
+              <tr>
+                <td style="padding: 1rem 1.25rem; font-weight: 700; color: var(--sacred-maroon);">Shej Aarti & Shayan Darshan</td>
+                <td style="padding: 1rem 1.25rem; color: var(--primary-dark); font-weight: 600;">09:30 PM – 09:45 PM</td>
+                <td style="padding: 1rem 1.25rem; color: var(--text-secondary);">Night slumber lullabies and sanctum closure</td>
+                <td style="padding: 1rem 1.25rem;"><span style="color: #78716c; font-weight: 700;">Final Entry 09:15 PM</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SACRED DEVOTIONAL MUSIC & YOUTUBE SHOWCASE (PUSHPA BHANDARI)
+       Unique, Pristine & 100% Attractive (Zero Buggy Iframes)
+       ========================================================================== -->
+  <section class="youtube-section" id="youtube-bhakti-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="background: rgba(239, 68, 68, 0.1); color: #dc2626; border-color: rgba(239, 68, 68, 0.3);">
+          स्वर कोकिला पुष्पा भंडारी &bull; Official Spiritual Channel
+        </span>
+        <h2 class="section-title">श्री भक्ति संगीत एवं भजन गंगा</h2>
+        <div class="ornament-divider"><span>🎵</span></div>
+        <p class="section-subtitle">
+          Experience soul-stirring Himalayan Jagars, sacred Mandir Aartis, and divine chants by <strong>Smt. Pushpa Bhandari</strong>.
+        </p>
+      </div>
+
+      <!-- Channel Spotlight Header Card -->
+      <div class="youtube-channel-header" style="background: linear-gradient(135deg, #24060c 0%, #450c19 50%, #1f040a 100%); border: 2px solid var(--accent-gold); border-radius: 20px; padding: 2.25rem; box-shadow: var(--shadow-lg); margin-bottom: 2.5rem;">
+        <div class="yt-profile-group" style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <div class="yt-avatar" style="width: 85px; height: 85px; border-radius: 50%; border: 3px solid var(--accent-gold); background: var(--gold-gradient); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 0 25px rgba(245, 158, 11, 0.5);">
+            🎙️
+          </div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <h3 class="yt-title" style="color: #fff; font-size: 1.6rem; margin: 0;">Pushpa Bhandari</h3>
+              <span style="background: #1d4ed8; color: #fff; padding: 0.15rem 0.55rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 700;">
+                ✓ Official Channel
+              </span>
+            </div>
+            <div class="yt-handle" style="color: #fde047; font-weight: 600; font-size: 0.95rem; margin: 0.25rem 0;">
+              <span>@pushpabhandari6645</span> &bull; <span>Devbhoomi Uttarakhand Traditional Artist</span>
+            </div>
+            <div class="yt-sub-badge" style="display: inline-flex; gap: 0.75rem; color: #e2e8f0; font-size: 0.8rem; background: rgba(255,255,255,0.08); padding: 0.25rem 0.75rem; border-radius: 9999px;">
+              <span>👥 45.8K+ Subscribers</span> &bull; <span>🎵 120+ Sacred Tracks</span> &bull; <span>👁️ 5.4M+ Views</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="https://www.youtube.com/@pushpabhandari6645?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="btn-youtube">
+            <span>▶</span> Subscribe on YouTube
+          </a>
+          <a href="pushpa-bhandari-bhajan.html" class="btn btn-gold">
+            📜 Bio & Discography
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Unique & Attractive Sacred Track Showcase Cards -->
+      <div class="grid-4" style="gap: 1.5rem;">
+        
+        <!-- Track Card 1 -->
+        <div class="temple-card tilt-card-3d" style="border-radius: 16px; overflow: hidden; border: 1.5px solid var(--border-gold); background: #fff;">
+          <div class="card-img-wrap" style="height: 180px; position: relative;">
+            <img src="https://images.unsplash.com/photo-1567591370504-8b631d575459?q=80&w=600&auto=format&fit=crop" alt="Shree Siddhivinayak Aarti">
+            <span class="card-badge" style="background: #dc2626; font-size: 0.7rem;">Maha Aarti</span>
+            <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.72rem; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700;">
+              12:45
+            </div>
+          </div>
+          <div class="card-body" style="padding: 1.25rem;">
+            <h4 style="color: var(--sacred-maroon); font-size: 1.05rem; margin-bottom: 0.35rem;">
+              Shree Siddhivinayak Maha Aarti
+            </h4>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">
+              Auspicious morning invocation with brass bells and traditional Vedic instruments.
+            </p>
+            <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+              <button class="btn btn-sm btn-outline-gold js-ring-bell" style="flex: 1;" title="Play Sacred Chime">
+                🔔 Chime
+              </button>
+              <a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" style="flex: 1.4; background: #dc2626;">
+                ▶ YouTube ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track Card 2 -->
+        <div class="temple-card tilt-card-3d" style="border-radius: 16px; overflow: hidden; border: 1.5px solid var(--border-gold); background: #fff;">
+          <div class="card-img-wrap" style="height: 180px; position: relative;">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=600&auto=format&fit=crop" alt="Mata Nanda Devi Jagar">
+            <span class="card-badge" style="background: #b45309; font-size: 0.7rem;">Himalayan Jagar</span>
+            <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.72rem; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700;">
+              18:20
+            </div>
+          </div>
+          <div class="card-body" style="padding: 1.25rem;">
+            <h4 style="color: var(--sacred-maroon); font-size: 1.05rem; margin-bottom: 0.35rem;">
+              Mata Nanda Devi Pavitra Jagar
+            </h4>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">
+              Ancient Himalayan folk invocation celebrating Uttarakhand's supreme guardian goddess.
+            </p>
+            <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+              <button class="btn btn-sm btn-outline-gold js-ring-bell" style="flex: 1;" title="Play Sacred Chime">
+                🔔 Chime
+              </button>
+              <a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" style="flex: 1.4; background: #dc2626;">
+                ▶ YouTube ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track Card 3 -->
+        <div class="temple-card tilt-card-3d" style="border-radius: 16px; overflow: hidden; border: 1.5px solid var(--border-gold); background: #fff;">
+          <div class="card-img-wrap" style="height: 180px; position: relative;">
+            <img src="https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=600&auto=format&fit=crop" alt="Kedarnath Maha Rudra Jaap">
+            <span class="card-badge" style="background: #1e3a8a; font-size: 0.7rem;">Shiv Stuti</span>
+            <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.72rem; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700;">
+              21:10
+            </div>
+          </div>
+          <div class="card-body" style="padding: 1.25rem;">
+            <h4 style="color: var(--sacred-maroon); font-size: 1.05rem; margin-bottom: 0.35rem;">
+              Om Namah Shivaya 108 Chants
+            </h4>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">
+              Peaceful Himalayan meditation chants and Mahamrityunjaya Stotram for deep calm.
+            </p>
+            <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+              <button class="btn btn-sm btn-outline-gold js-ring-bell" style="flex: 1;" title="Play Sacred Chime">
+                🔔 Chime
+              </button>
+              <a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" style="flex: 1.4; background: #dc2626;">
+                ▶ YouTube ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track Card 4 -->
+        <div class="temple-card tilt-card-3d" style="border-radius: 16px; overflow: hidden; border: 1.5px solid var(--border-gold); background: #fff;">
+          <div class="card-img-wrap" style="height: 180px; position: relative;">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop" alt="Navratri Chandi Path">
+            <span class="card-badge" style="background: #9f1239; font-size: 0.7rem;">Navratri Bhajan</span>
+            <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.72rem; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700;">
+              15:35
+            </div>
+          </div>
+          <div class="card-body" style="padding: 1.25rem;">
+            <h4 style="color: var(--sacred-maroon); font-size: 1.05rem; margin-bottom: 0.35rem;">
+              Sharad Navratri Mangal Geet
+            </h4>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">
+              Traditional auspicious hymns sung during Durga Saptashati and Deepotsav celebrations.
+            </p>
+            <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+              <button class="btn btn-sm btn-outline-gold js-ring-bell" style="flex: 1;" title="Play Sacred Chime">
+                🔔 Chime
+              </button>
+              <a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" style="flex: 1.4; background: #dc2626;">
+                ▶ YouTube ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg">
+          ▶ Explore All 120+ Bhajans on Pushpa Bhandari YouTube Channel
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sacred Pilgrims Trust & Footer -->
+  <footer class="temple-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <span style="font-size: 2rem;">🕉️</span>
+            <div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: #fff;">SHREE SIDDHIVINAYAK</div>
+              <div style="font-size: 0.75rem; color: var(--accent-gold); letter-spacing: 1px;">MAHALAKSHMI DHAM TRUST</div>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #a8a29e; margin-bottom: 1rem;">
+            Dedicated to the preservation of Sanatana Dharma, spiritual welfare, Vedic knowledge, free medical relief, and daily Annadanam.
+          </p>
+          <div style="font-size: 0.82rem; color: #d6d3d1;">
+            📍 Siddhivinayak Marg, Prabhadevi, Mumbai 400028<br>
+            📞 Helpline: +91 (022) 2430-8911 | +91 98200 12345<br>
+            📧 Email: trust@siddhivinayakdham.org
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Devotee Services</h4>
+          <ul class="footer-links">
+            <li><a href="darshan.html">Darshan Timings</a></li>
+            <li><a href="pooja-booking.html">Online Archana Booking</a></li>
+            <li><a href="donation.html">Donation & Annadanam</a></li>
+            <li><a href="events.html">Festival Calendar</a></li>
+            <li><a href="gallery.html">Sacred Photo Gallery</a></li>
+            <li><a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" style="color: #ef4444; font-weight: 600;">▶ Pushpa Bhandari (YouTube)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Temple Trust</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">History & Sthala Purana</a></li>
+            <li><a href="about.html#trustees">Board of Trustees</a></li>
+            <li><a href="donation.html#tax80g">80G Tax Exemption</a></li>
+            <li><a href="contact.html">Dharamshala & Stay</a></li>
+            <li><a href="auth.html">Devotee Registration & Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Vedic Thought of the Day</h4>
+          <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-gold); border-radius: var(--radius-sm); padding: 1.25rem;">
+            <p style="font-family: var(--font-sanskrit); color: #fde047; font-size: 1.05rem; margin-bottom: 0.5rem;">
+              ॥ सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः ॥
+            </p>
+            <p style="font-size: 0.82rem; color: #e7e5e4;">
+              "May all sentient beings everywhere be happy and free, and may the thoughts and actions of my own life contribute in some way to that happiness."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Shree Siddhivinayak Mahalakshmi Dham Trust. All Rights Reserved. Reg. No: MH-MUM-TR-2024/9871A.
+        </div>
+        <div>
+          <a href="#" class="js-ring-bell" style="color: #a8a29e;">Ring Sacred Bell 🔔</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating 3D Interactive Temple Bell -->
+  <div class="floating-3d-bell js-ring-bell" id="floating-3d-bell" title="Click to Ring Temple Bell">
+    <div class="bell-tooltip">🔔 Ring 3D Temple Bell</div>
+    <div class="bell-chain"></div>
+    <div class="bell-body-3d">🔔</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/database.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/temple3d.js"></script>
+  <script src="js/youtube.js"></script>
+</body>
+</html>

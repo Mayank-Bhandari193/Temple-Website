@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darshan & Aarti Timings | Shree Siddhivinayak Mahalakshmi Dham</title>
+  <meta name="description" content="View complete daily Darshan timings, live Aarti schedules, VIP pass details, dress code and pilgrim guidelines at Shree Siddhivinayak Mahalakshmi Dham.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Sacred Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="panchang-chip" id="panchang-display">🕉️ Loading Vedic Panchang...</span>
+        <span class="live-indicator"><span class="live-pulse"></span> Sanctum Open | General Darshan Running</span>
+      </div>
+      <div class="top-bar-right js-auth-slot">
+        <span>📞 Helpline: +91 98200 12345</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Announcement Bar -->
+  <div class="marquee-bar">
+    <div class="container" style="display: flex; align-items: center; width: 100%;">
+      <span class="marquee-badge">Notice</span>
+      <div class="marquee-text-container">
+        <span class="marquee-text" id="live-announcement-text">
+          🙏 Tuesday & Sankashti Chaturthi special early morning Kakad Aarti begins at 04:30 AM.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-emblem">🕉️</div>
+        <div class="brand-text">
+          <span class="brand-title">SHREE SIDDHIVINAYAK</span>
+          <span class="brand-subtitle">MAHALAKSHMI DHAM</span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="pushpa-bhandari-bhajan.html" class="nav-link" style="color: #dc2626; font-weight: 700;">📺 Pushpa Bhandari TV</a></li>
+        <li><a href="about.html" class="nav-link">About Mandir</a></li>
+        <li><a href="darshan.html" class="nav-link active">Darshan & Timings</a></li>
+        <li><a href="pooja-booking.html" class="nav-link">Online Poojas</a></li>
+        <li><a href="donation.html" class="nav-link">Donation & Seva</a></li>
+        <li><a href="events.html" class="nav-link">Festivals</a></li>
+        <li><a href="gallery.html" class="nav-link">Sacred Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Pilgrim Guide</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="sound-toggle-btn js-ring-bell" title="Ring Sacred Bell">🔔</button>
+        <a href="auth.html" class="btn btn-diya" style="padding: 0.5rem 0.9rem; font-size: 0.82rem;">👤 Register / Login</a>
+        <a href="donation.html" class="btn btn-primary">🙏 Seva / Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="donation-hero">
+    <div class="container" style="max-width: 860px;">
+      <span class="section-tag" style="background: rgba(212, 175, 55, 0.25); color: #fde047; border-color: #fde047;">
+        Sacred Hours & Darshan Schedule
+      </span>
+      <h1 style="font-family: var(--font-ornate); font-size: clamp(2rem, 4vw, 3.2rem); color: #fff; margin: 0.75rem 0 1rem;">
+        Divine Darshan & Aarti
+      </h1>
+      <p style="font-size: 1.15rem; color: #f5f5f4; font-weight: 300;">
+        Experience the serene bliss of seeing the divine deities. Plan your pilgrimage according to our sacred temple timings.
+      </p>
+    </div>
+  </section>
+
+  <!-- Live Queue Status Meter -->
+  <section style="background: #fff; border-bottom: 2px solid var(--border-gold); padding: 1.5rem 0;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; letter-spacing: 1px;">Live Queue Telemetry</span>
+          <h3 style="font-family: var(--font-display); color: var(--sacred-maroon); margin: 0.2rem 0;">Current Sanctum Waiting Time</h3>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 0.5rem 1rem; text-align: center;">
+            <div style="font-size: 0.75rem; color: #166534; font-weight: 600;">General Mukh Darshan</div>
+            <div style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #15803d;">~20 - 25 Mins</div>
+          </div>
+
+          <div style="background: #fefce8; border: 1px solid #fde047; border-radius: 8px; padding: 0.5rem 1rem; text-align: center;">
+            <div style="font-size: 0.75rem; color: #854d0e; font-weight: 600;">Senior Citizens & Specially Abled</div>
+            <div style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #a16207;">~5 - 10 Mins</div>
+          </div>
+
+          <div style="background: #fff1f2; border: 1px solid #fecdd3; border-radius: 8px; padding: 0.5rem 1rem; text-align: center;">
+            <div style="font-size: 0.75rem; color: #9f1239; font-weight: 600;">Online Archana Pass Holders</div>
+            <div style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #e11d48;">Direct Priority Entry</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Daily Schedule Table -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nitya Karyakram</span>
+        <h2 class="section-title">Complete Aarti & Ritual Timetable</h2>
+        <div class="ornament-divider"><span>🔔</span></div>
+        <p class="section-subtitle">
+          Rituals follow unbroken Vedic traditions codified since the founding of the sacred trust.
+        </p>
+      </div>
+
+      <div style="background: #fff; border: 2px solid var(--border-gold); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: 3.5rem;">
+        <div class="table-responsive">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+            <thead>
+              <tr style="background: var(--crimson-gradient); color: #fff;">
+                <th style="padding: 1.1rem 1.25rem;">Time Slot</th>
+                <th style="padding: 1.1rem 1.25rem;">Aarti / Sacred Ritual</th>
+                <th style="padding: 1.1rem 1.25rem;">Presiding Deity</th>
+                <th style="padding: 1.1rem 1.25rem;">Devotee Entry Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 1.1rem 1.25rem; font-family: monospace; font-weight: 700; color: var(--primary); font-size: 1.05rem;">05:30 AM</td>
+                <td style="padding: 1.1rem 1.25rem;">
+                  <strong style="color: var(--sacred-maroon); font-size: 1.05rem;">Kakad Aarti (Morning Awakening)</strong>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Suprabhatam chanting & cleansing of sanctum with holy waters</div>
+                </td>
+                <td style="padding: 1.1rem 1.25rem;">Shree Siddhivinayak</td>
+                <td style="padding: 1.1rem 1.25rem;"><span style="color: #15803d; font-weight: 600;">✓ Free Open Entry</span></td>
+              </tr>
+
+              <tr style="border-bottom: 1px solid #f1f5f9; background: #fffdf9;">
+                <td style="padding: 1.1rem 1.25rem; font-family: monospace; font-weight: 700; color: var(--primary); font-size: 1.05rem;">06:30 AM – 08:00 AM</td>
+                <td style="padding: 1.1rem 1.25rem;">
+                  <strong style="color: var(--sacred-maroon); font-size: 1.05rem;">Panchamrit Abhishek & Shodashopachara</strong>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Sacred bath with Milk, Curd, Ghee, Honey & Sugar, followed by new Shringar</div>
+                </td>
+                <td style="padding: 1.1rem 1.25rem;">Mata Mahalakshmi & Shiva</td>
+                <td style="padding: 1.1rem 1.25rem;"><span style="color: #b45309; font-weight: 600;">Priest Sankalpa Bookings</span></td>
+              </tr>
+
+              <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 1.1rem 1.25rem; font-family: monospace; font-weight: 700; color: var(--primary); font-size: 1.05rem;">12:00 PM – 12:45 PM</td>
+                <td style="padding: 1.1rem 1.25rem;">
+                  <strong style="color: var(--sacred-maroon); font-size: 1.05rem;">Madhyahna Maha Bhog Aarti</strong>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Offering of traditional Modak, Laddoos, Kheer, and satvik Chhappan Bhog</div>
+                </td>
+                <td style="padding: 1.1rem 1.25rem;">All Deities</td>
+                <td style="padding: 1.1rem 1.25rem;"><span style="color: #15803d; font-weight: 600;">✓ Free Open Entry</span></td>
+              </tr>
+
+              <tr style="border-bottom: 1px solid #f1f5f9; background: #fffdf9;">
+                <td style="padding: 1.1rem 1.25rem; font-family: monospace; font-weight: 700; color: var(--primary); font-size: 1.05rem;">07:30 PM – 08:30 PM</td>
+                <td style="padding: 1.1rem 1.25rem;">
+                  <strong style="color: var(--sacred-maroon); font-size: 1.05rem;">Sandhya Maha Deepa Aarti (Grand Illumination)</strong>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Awe-inspiring evening aarti with 108 brass lamps, shankh naad and Vedic hymns</div>
+                </td>
+                <td style="padding: 1.1rem 1.25rem;">Whole Mandir Complex</td>
+                <td style="padding: 1.1rem 1.25rem;"><span style="color: #15803d; font-weight: 600;">✓ Grand Devotee Assembly</span></td>
+              </tr>
+
+              <tr>
+                <td style="padding: 1.1rem 1.25rem; font-family: monospace; font-weight: 700; color: var(--primary); font-size: 1.05rem;">09:30 PM – 09:45 PM</td>
+                <td style="padding: 1.1rem 1.25rem;">
+                  <strong style="color: var(--sacred-maroon); font-size: 1.05rem;">Shej Aarti (Night Rest Hymn)</strong>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Sanctum doors close at 09:45 PM until next morning 05:00 AM</div>
+                </td>
+                <td style="padding: 1.1rem 1.25rem;">Shree Siddhivinayak</td>
+                <td style="padding: 1.1rem 1.25rem;"><span style="color: #64748b; font-weight: 600;">Final Queue Closes 09:15 PM</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Guidelines & Etiquette -->
+      <div class="section-header">
+        <span class="section-tag">Pilgrim Etiquette</span>
+        <h2 class="section-title">Guidelines for Devotees</h2>
+        <div class="ornament-divider"><span>🪔</span></div>
+      </div>
+
+      <div class="grid-3">
+        <div class="temple-card" style="padding: 1.5rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">👔</div>
+          <h4 style="color: var(--sacred-maroon); margin-bottom: 0.5rem;">Vedic Dress Code</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">
+            Traditional modest attire is required. Dhoti / Kurta-Pyjama for men; Sarees or Salwar Kameez for women. Shorts, sleeveless, and Western beachwear are strictly not permitted inside the sanctum.
+          </p>
+        </div>
+
+        <div class="temple-card" style="padding: 1.5rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">📱</div>
+          <h4 style="color: var(--sacred-maroon); margin-bottom: 0.5rem;">Mobile & Electronics</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">
+            Mobile phones must be switched to silent or switched off upon crossing the Garud Mandapa. Photography or videography inside the inner Garbhagriha is strictly prohibited.
+          </p>
+        </div>
+
+        <div class="temple-card" style="padding: 1.5rem;">
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🦽</div>
+          <h4 style="color: var(--sacred-maroon); margin-bottom: 0.5rem;">Accessibility & Assistance</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">
+            Complimentary wheelchairs, ramps, and dedicated volunteer assistants are available at Gate 2 for elderly pilgrims and differently-abled devotees.
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="pooja-booking.html" class="btn btn-gold btn-lg">
+          🪔 Book Your Online Archana Slot
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="temple-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <span style="font-size: 2rem;">🕉️</span>
+            <div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: #fff;">SHREE SIDDHIVINAYAK</div>
+              <div style="font-size: 0.75rem; color: var(--accent-gold); letter-spacing: 1px;">MAHALAKSHMI DHAM TRUST</div>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #a8a29e;">
+            Official 80G Tax-exempt charitable trust. Reg No. MH-MUM-TR-2024/9871A.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Devotee Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="darshan.html">Darshan Timings</a></li>
+            <li><a href="pooja-booking.html">Online Poojas</a></li>
+            <li><a href="donation.html">Donation & Seva</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Administration</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Mandir</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="pushpa-bhandari-bhajan.html">Bhajan Ganga TV</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Helpline</h4>
+          <p style="font-size: 0.85rem; color: #d6d3d1;">
+            📞 +91 (022) 2430-8911<br>
+            📧 trust@siddhivinayakdham.org<br>
+            Siddhivinayak Marg, Prabhadevi, Mumbai
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Shree Siddhivinayak Mahalakshmi Dham Trust. All Rights Reserved.</div>
+        <div><a href="#" class="js-ring-bell" style="color: #a8a29e;">Ring Sacred Bell 🔔</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating 3D Interactive Temple Bell -->
+  <div class="floating-3d-bell js-ring-bell" id="floating-3d-bell" title="Click to Ring Temple Bell">
+    <div class="bell-tooltip">🔔 Ring 3D Temple Bell</div>
+    <div class="bell-chain"></div>
+    <div class="bell-body-3d">🔔</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/database.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/temple3d.js"></script>
+</body>
+</html>

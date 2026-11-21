@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sacred Gallery | Shree Siddhivinayak Mahalakshmi Dham</title>
+  <meta name="description" content="View sacred photography of deities, golden gopuram, daily aarti, annual festivals, goshala, and annadanam mahaprasad.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Sacred Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="panchang-chip" id="panchang-display">🕉️ Loading Vedic Panchang...</span>
+        <span class="live-indicator"><span class="live-pulse"></span> Sacred Photography Archive</span>
+      </div>
+      <div class="top-bar-right js-auth-slot">
+        <span>📞 Helpline: +91 98200 12345</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Announcement Bar -->
+  <div class="marquee-bar">
+    <div class="container" style="display: flex; align-items: center; width: 100%;">
+      <span class="marquee-badge">Notice</span>
+      <div class="marquee-text-container">
+        <span class="marquee-text" id="live-announcement-text">
+          🙏 Devotees can view high-definition sacred photographs of the daily Shringar and evening Deepotsav below.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-emblem">🕉️</div>
+        <div class="brand-text">
+          <span class="brand-title">SHREE SIDDHIVINAYAK</span>
+          <span class="brand-subtitle">MAHALAKSHMI DHAM</span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="pushpa-bhandari-bhajan.html" class="nav-link" style="color: #dc2626; font-weight: 700;">📺 Pushpa Bhandari TV</a></li>
+        <li><a href="about.html" class="nav-link">About Mandir</a></li>
+        <li><a href="darshan.html" class="nav-link">Darshan & Timings</a></li>
+        <li><a href="pooja-booking.html" class="nav-link">Online Poojas</a></li>
+        <li><a href="donation.html" class="nav-link">Donation & Seva</a></li>
+        <li><a href="events.html" class="nav-link">Festivals</a></li>
+        <li><a href="gallery.html" class="nav-link active">Sacred Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Pilgrim Guide</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="sound-toggle-btn js-ring-bell" title="Ring Sacred Bell">🔔</button>
+        <a href="auth.html" class="btn btn-diya" style="padding: 0.5rem 0.9rem; font-size: 0.82rem;">👤 Register / Login</a>
+        <a href="donation.html" class="btn btn-primary">🙏 Seva / Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="donation-hero">
+    <div class="container" style="max-width: 860px;">
+      <span class="section-tag" style="background: rgba(212, 175, 55, 0.25); color: #fde047; border-color: #fde047;">
+        Divine Visual Darshan
+      </span>
+      <h1 style="font-family: var(--font-ornate); font-size: clamp(2rem, 4vw, 3.2rem); color: #fff; margin: 0.75rem 0 1rem;">
+        Sacred Photo Gallery
+      </h1>
+      <p style="font-size: 1.15rem; color: #f5f5f4; font-weight: 300;">
+        Glimpses of spiritual grandeur, daily divine adornments, festival illumination, and temple social service.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Filter & Grid -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Filter Tabs -->
+      <div class="donation-tabs" id="gallery-tabs">
+        <button class="donation-tab-btn active" data-filter="all">All Photos</button>
+        <button class="donation-tab-btn" data-filter="deities">Sanctum & Deities</button>
+        <button class="donation-tab-btn" data-filter="festivals">Festivals & Deepotsav</button>
+        <button class="donation-tab-btn" data-filter="architecture">Temple Architecture</button>
+        <button class="donation-tab-btn" data-filter="seva">Annadanam & Goshala</button>
+        <button class="donation-tab-btn" data-filter="video" style="border-color: #ef4444; color: #dc2626; font-weight: 700;">▶ Devotional Videos (@pushpabhandari6645)</button>
+      </div>
+
+      <!-- Photo Grid -->
+      <div class="grid-3" id="gallery-grid">
+        <!-- Photo 1 -->
+        <div class="temple-card gallery-item" data-category="deities" onclick="openLightbox('https://images.unsplash.com/photo-1567591370504-8b631d575459?q=80&w=1200&auto=format&fit=crop', 'Shree Siddhivinayak Daily Pushpa Shringar')">
+          <div class="card-img-wrap" style="height: 260px; cursor: pointer;">
+            <img src="https://images.unsplash.com/photo-1567591370504-8b631d575459?q=80&w=800&auto=format&fit=crop" alt="Shree Siddhivinayak">
+            <span class="card-badge">Sanctum</span>
+          </div>
+          <div class="card-body">
+            <h4 style="color: var(--sacred-maroon); margin-bottom: 0.25rem;">Shree Siddhivinayak Pushpa Shringar</h4>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">Adorned with fresh marigold and lotus garlands for morning Kakad Aarti.</p>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="temple-card gallery-item" data-category="architecture" onclick="openLightbox('https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop', 'Golden Shikhar at Sunrise')">
+          <div class="card-img-wrap" style="height: 260px; cursor: pointer;">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=800&auto=format&fit=crop" alt="Golden Shikhar">
+            <span class="card-badge">Architecture</span>
+          </div>
+          <div class="card-body">
+            <h4 style="color: var(--sacred-maroon); margin-bottom: 0.25rem;">Golden Gopuram at Dawn</h4>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">The 65-foot sacred stone spire illuminated during morning Surya Vandana.</p>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="temple-card gallery-item" data-category="festivals" onclick="openLightbox('https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=1200&auto=format&fit=crop', 'Diwali Maha Deepotsav with 51,000 Diyas')">
+          <div class="card-img-wrap" style="height: 260px; cursor: pointer;">
+            <img src="https://images.unsplash.com/photo-1609766857041-ed402ea8069a?q=80&w=800&auto=format&fit=crop" alt="Diwali Deepotsav">
+            <span class="card-badge">Festivals</span>
+          </div>
+          <div class="card-body">
+            <h4 style="color: var(--sacred-maroon); margin-bottom: 0.25rem;">Maha Deepotsav Illumination</h4>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">Temple courtyard sparkling with thousands of consecrated clay lamps.</p>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="temple-card gallery-item" data-category="deities" onclick="openLightbox('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop', 'Mata Mahalakshmi Divine Golden Alankaram')">
+          <div class="card-img-wrap" style="height: 260px; cursor: pointer;">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800&auto=format&fit=crop" alt="Mata Mahalakshmi">
+            <span class="card-badge">Deity</span>
+          </div>
+          <div class="card-body">
+            <h4 style="color: var(--sacred-maroon); margin-bottom: 0.25rem;">Mata Mahalakshmi Swarna Alankaram</h4>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">Golden saree and traditional sacred ornaments during Friday Special Pooja.</p>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="temple-card gallery-item" data-category="seva" onclick="openLightbox('https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=1200&auto=format&fit=crop', 'Temple Goshala - Gir Cow Care')">
+          <div class="card-img-wrap" style="height: 260px; cursor: pointer;">
+            <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=800&auto=format&fit=crop" alt="Temple Goshala">
+            <span class="card-badge">Gau Seva</span>
+          </div>
+          <div class="card-body">
+            <h4 style="color: var(--sacred-maroon); margin-bottom: 0.25rem;">Sri Surabhi Goshala</h4>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">Over 150 indigenous calves and cows cared for lovingly with fresh green fodder.</p>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="temple-card gallery-item" data-category="seva" onclick="openLightbox('https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop', 'Maha Annadanam Hall Serving Satvik Meals')">
+          <div class="card-img-wrap" style="height: 260px; cursor: pointer;">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=800&auto=format&fit=crop" alt="Annadanam Hall">
+            <span class="card-badge">Annadanam</span>
+          </div>
+          <div class="card-body">
+            <h4 style="color: var(--sacred-maroon); margin-bottom: 0.25rem;">Daily Satvik Mahaprasad Hall</h4>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">Steam-cooked wholesome vegetarian meals served freely to all visiting pilgrims.</p>
+          </div>
+        </div>
+
+        <!-- Video Item 1: Pushpa Bhandari Aarti -->
+        <div class="temple-card gallery-item" data-category="video" style="border-color: #ef4444;">
+          <div class="card-img-wrap" style="height: 260px; position: relative;">
+            <img src="https://images.unsplash.com/photo-1567591370504-8b631d575459?q=80&w=800&auto=format&fit=crop" alt="Shree Siddhivinayak Aarti">
+            <span class="card-badge" style="background: #ef4444;">YouTube Video</span>
+            <a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" style="position: absolute; inset: 0; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #fff;">
+              ▶
+            </a>
+          </div>
+          <div class="card-body">
+            <span style="font-size: 0.75rem; color: #ef4444; font-weight: 700;">PUSHPA BHANDARI OFFICIAL</span>
+            <h4 style="color: var(--sacred-maroon); margin-bottom: 0.25rem;">Shree Siddhivinayak Aarti & Mangal Gaan</h4>
+            <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 0.75rem;">Traditional devotional aarti performed with Vedic instruments and divine hymns.</p>
+            <a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background: #ef4444; color: #fff; width: 100%;">
+              ▶ Watch on @pushpabhandari6645
+            </a>
+          </div>
+        </div>
+
+        <!-- Video Item 2: Uttarakhand Traditional Jagar -->
+        <div class="temple-card gallery-item" data-category="video" style="border-color: #ef4444;">
+          <div class="card-img-wrap" style="height: 260px; position: relative;">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800&auto=format&fit=crop" alt="Uttarakhand Folk Jagar">
+            <span class="card-badge" style="background: #ef4444;">YouTube Video</span>
+            <a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" style="position: absolute; inset: 0; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #fff;">
+              ▶
+            </a>
+          </div>
+          <div class="card-body">
+            <span style="font-size: 0.75rem; color: #ef4444; font-weight: 700;">DEVBHOOMI FOLK & BHAJAN</span>
+            <h4 style="color: var(--sacred-maroon); margin-bottom: 0.25rem;">Traditional Devbhoomi Jagar & Vandana</h4>
+            <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 0.75rem;">Ancient Himalayan folk invocation celebrating regional temple heritage.</p>
+            <a href="https://www.youtube.com/@pushpabhandari6645" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background: #ef4444; color: #fff; width: 100%;">
+              ▶ Watch on @pushpabhandari6645
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-backdrop" id="lightbox-modal">
+    <div class="modal-box" style="max-width: 880px; padding: 1.5rem; background: #1c1917; color: #fff; border-color: var(--accent-gold);">
+      <button class="modal-close-btn" style="color: #fff;" onclick="closeLightbox()">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged Sacred View" style="width: 100%; max-height: 70vh; object-fit: contain; border-radius: 8px; margin-bottom: 1rem;">
+      <h3 id="lightbox-title" style="color: #fde047; font-family: var(--font-display); text-align: center; margin: 0;"></h3>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="temple-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <span style="font-size: 2rem;">🕉️</span>
+            <div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: #fff;">SHREE SIDDHIVINAYAK</div>
+              <div style="font-size: 0.75rem; color: var(--accent-gold); letter-spacing: 1px;">MAHALAKSHMI DHAM TRUST</div>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #a8a29e;">
+            Official 80G Tax-exempt charitable trust. Reg No. MH-MUM-TR-2024/9871A.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Devotee Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="darshan.html">Darshan Timings</a></li>
+            <li><a href="pooja-booking.html">Online Poojas</a></li>
+            <li><a href="donation.html">Donation & Seva</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Administration</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Mandir</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="pushpa-bhandari-bhajan.html">Bhajan Ganga TV</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Helpline</h4>
+          <p style="font-size: 0.85rem; color: #d6d3d1;">
+            📞 +91 (022) 2430-8911<br>
+            📧 trust@siddhivinayakdham.org<br>
+            Siddhivinayak Marg, Prabhadevi, Mumbai
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Shree Siddhivinayak Mahalakshmi Dham Trust. All Rights Reserved.</div>
+        <div><a href="#" class="js-ring-bell" style="color: #a8a29e;">Ring Sacred Bell 🔔</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating 3D Interactive Temple Bell -->
+  <div class="floating-3d-bell js-ring-bell" id="floating-3d-bell" title="Click to Ring Temple Bell">
+    <div class="bell-tooltip">🔔 Ring 3D Temple Bell</div>
+    <div class="bell-chain"></div>
+    <div class="bell-body-3d">🔔</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/database.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/temple3d.js"></script>
+  <script>
+    function openLightbox(src, title) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const titleEl = document.getElementById('lightbox-title');
+      if (modal && img && titleEl) {
+        img.src = src;
+        titleEl.textContent = title;
+        modal.classList.add('open');
+      }
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      if (modal) modal.classList.remove('open');
+    }
+
+    // Filter functionality
+    document.querySelectorAll('#gallery-tabs button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#gallery-tabs button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

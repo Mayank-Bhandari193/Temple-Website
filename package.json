@@ -1,0 +1,21 @@
+{
+  "name": "temple-website",
+  "version": "2.0.0",
+  "description": "Shree Siddhivinayak Mahalakshmi Dham - Modern Multi-page Temple Website with 80G Donation Engine & Developer Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "temple",
+    "mandir",
+    "donation",
+    "80g",
+    "developer-dashboard",
+    "vedic",
+    "darshan"
+  ],
+  "author": "Google Deepmind & Developer",
+  "license": "ISC"
+}

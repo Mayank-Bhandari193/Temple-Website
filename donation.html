@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sacred Seva & Donations | Shree Siddhivinayak Mahalakshmi Dham</title>
+  <meta name="description" content="Offer your sacred donations for Annadanam, Goshala, Temple Renovation, and Akhand Deepa. Instant 80G Tax Exemption E-Receipt provided.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Sacred Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="panchang-chip" id="panchang-display">🕉️ Loading Vedic Panchang...</span>
+        <span class="live-indicator"><span class="live-pulse"></span> Sanctum Open</span>
+      </div>
+      <div class="top-bar-right js-auth-slot">
+        <span>📞 Donation Desk: +91 98200 12345</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Announcement Bar -->
+  <div class="marquee-bar">
+    <div class="container" style="display: flex; align-items: center; width: 100%;">
+      <span class="marquee-badge">Notice</span>
+      <div class="marquee-text-container">
+        <span class="marquee-text" id="live-announcement-text">
+          🙏 All donations to Shree Siddhivinayak Mahalakshmi Dham Trust are eligible for 50% Tax Deduction under Section 80G of Income Tax Act.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-emblem">🕉️</div>
+        <div class="brand-text">
+          <span class="brand-title">SHREE SIDDHIVINAYAK</span>
+          <span class="brand-subtitle">MAHALAKSHMI DHAM</span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="pushpa-bhandari-bhajan.html" class="nav-link" style="color: #dc2626; font-weight: 700;">📺 Pushpa Bhandari TV</a></li>
+        <li><a href="about.html" class="nav-link">About Mandir</a></li>
+        <li><a href="darshan.html" class="nav-link">Darshan & Timings</a></li>
+        <li><a href="pooja-booking.html" class="nav-link">Online Poojas</a></li>
+        <li><a href="donation.html" class="nav-link active">Donation & Seva</a></li>
+        <li><a href="events.html" class="nav-link">Festivals</a></li>
+        <li><a href="gallery.html" class="nav-link">Sacred Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Pilgrim Guide</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="sound-toggle-btn js-ring-bell" title="Ring Sacred Temple Bell">🔔</button>
+        <a href="auth.html" class="btn btn-diya" style="padding: 0.5rem 0.9rem; font-size: 0.82rem;">👤 Register / Login</a>
+        <a href="#donation-form-section" class="btn btn-primary">🙏 Donate Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Donation Hero Banner -->
+  <section class="donation-hero">
+    <div class="container" style="max-width: 860px;">
+      <div class="section-tag" style="background: rgba(212, 175, 55, 0.25); color: #fde047; border-color: #fde047;">
+        80G Tax Exemption Eligible
+      </div>
+      <h1 style="font-family: var(--font-ornate); font-size: clamp(2rem, 4vw, 3.2rem); color: #fff; margin: 0.75rem 0 1rem;">
+        Pavitra Seva & Sacred Daan
+      </h1>
+      <p style="font-size: 1.15rem; color: #f5f5f4; font-weight: 300;">
+        "न हि ज्ञानेन सदृशं पवित्रमिह विद्यते" — Support the temple's daily noble initiatives. Feed visiting pilgrims, shelter indigenous cows, educate young Vedic scholars, and receive an instant official 80G tax receipt.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seva Selection Grid -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Step 1: Choose Your Seva</span>
+        <h2 class="section-title">Select a Divine Cause</h2>
+        <div class="ornament-divider"><span>☸</span></div>
+        <p class="section-subtitle">
+          Select any of the sacred sevas below to dedicate your offering with a personalized Vedic Sankalpa.
+        </p>
+      </div>
+
+      <div class="grid-3" id="seva-cards-grid">
+        <!-- Seva 1: Annadanam -->
+        <div class="seva-card selected" data-seva-name="Maha Annadanam Seva (Maha Prasad)" data-suggested-amount="2100">
+          <div class="seva-icon">🍲</div>
+          <h3 style="font-size: 1.25rem; color: var(--sacred-maroon);">Maha Annadanam Seva</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">
+            Serve wholesome satvik meals to visiting pilgrims, sadhus, and families. Annadanam is praised across Vedic scriptures as the highest virtue.
+          </p>
+          <div class="seva-price-tag">Suggested: ₹2,100</div>
+          <span style="font-size: 0.8rem; color: #15803d; font-weight: 600;">✓ Selected for Sankalpa</span>
+        </div>
+
+        <!-- Seva 2: Gau Seva -->
+        <div class="seva-card" data-seva-name="Goshala & Gau Mata Protection Seva" data-suggested-amount="5100">
+          <div class="seva-icon">🐄</div>
+          <h3 style="font-size: 1.25rem; color: var(--sacred-maroon);">Goshala & Gau Mata Seva</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">
+            Support 150+ sacred Gir and Sahiwal cows with daily fresh green grass, jaggery, Ayurvedic medical care, and clean cow shelters.
+          </p>
+          <div class="seva-price-tag">Suggested: ₹5,100</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+
+        <!-- Seva 3: Mandir Renovation -->
+        <div class="seva-card" data-seva-name="Temple Gopuram & Golden Kalash Renovation" data-suggested-amount="11000">
+          <div class="seva-icon">🛕</div>
+          <h3 style="font-size: 1.25rem; color: var(--sacred-maroon);">Gopuram & Kalash Renovation</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">
+            Participate in the grand restoration of ancient temple carvings, gold-plated shikhar kalash, and pilgrim hall enhancements.
+          </p>
+          <div class="seva-price-tag">Suggested: ₹11,000</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+
+        <!-- Seva 4: Nitya Akhand Deepa -->
+        <div class="seva-card" data-seva-name="Nitya Akhand Deepa & Dhoop Seva" data-suggested-amount="1100">
+          <div class="seva-icon">🪔</div>
+          <h3 style="font-size: 1.25rem; color: var(--sacred-maroon);">Nitya Akhand Deepa Seva</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">
+            Keep the eternal sacred brass lamps burning round the clock with pure cow ghee and fragrant sandalwood dhoop in the inner sanctum.
+          </p>
+          <div class="seva-price-tag">Suggested: ₹1,100</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+
+        <!-- Seva 5: Veda Pathashala -->
+        <div class="seva-card" data-seva-name="Veda Pathashala & Vidya Daan" data-suggested-amount="5001">
+          <div class="seva-icon">📜</div>
+          <h3 style="font-size: 1.25rem; color: var(--sacred-maroon);">Veda Pathashala Education</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">
+            Sponsor residential schooling, scriptures, uniform, and Vedic chanting education for students in our traditional Gurukula.
+          </p>
+          <div class="seva-price-tag">Suggested: ₹5,001</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+
+        <!-- Seva 6: General Mandir Fund -->
+        <div class="seva-card" data-seva-name="General Temple Trust Corpus Fund" data-suggested-amount="501">
+          <div class="seva-icon">🌸</div>
+          <h3 style="font-size: 1.25rem; color: var(--sacred-maroon);">General Mandir Corpus Fund</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">
+            Open contribution utilized wherever the mandir requires it most: daily flowers, festive decorations, and security.
+          </p>
+          <div class="seva-price-tag">Suggested: ₹501</div>
+          <span style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Click to Select</span>
+        </div>
+      </div>
+
+      <!-- Donation Form Section -->
+      <div class="donation-form-wrapper" id="donation-form-section">
+        <div style="border-bottom: 2px solid var(--border-gold); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <h3 style="font-family: var(--font-display); color: var(--sacred-maroon); font-size: 1.5rem; margin-bottom: 0.25rem;">
+            Step 2: Devotee & Sankalpa Details
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Selected Seva: <strong id="summary-seva" style="color: var(--primary);">Maha Annadanam Seva (Maha Prasad)</strong> &bull; Amount: <strong id="summary-amount" style="color: var(--primary-dark);">₹2,100</strong>
+          </p>
+        </div>
+
+        <form id="temple-donation-form">
+          <!-- Preset Amount Selection -->
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label>Select Offering Amount (INR ₹):</label>
+            <div class="amount-presets">
+              <button type="button" class="amount-preset-btn" data-amount="501">₹501</button>
+              <button type="button" class="amount-preset-btn" data-amount="1100">₹1,100</button>
+              <button type="button" class="amount-preset-btn active" data-amount="2100">₹2,100</button>
+              <button type="button" class="amount-preset-btn" data-amount="5100">₹5,100</button>
+              <button type="button" class="amount-preset-btn" data-amount="11000">₹11,000</button>
+              <button type="button" class="amount-preset-btn" data-amount="21000">₹21,000</button>
+              <button type="button" class="amount-preset-btn" data-amount="51000">₹51,000</button>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem;">
+              <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Or Enter Custom Amount:</span>
+              <input type="number" id="custom-donation-amount" class="form-control" style="max-width: 200px;" value="2100" min="101" step="100">
+            </div>
+          </div>
+
+          <!-- Devotee Details Grid -->
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="donor-name">Devotee Full Name *</label>
+              <input type="text" id="donor-name" class="form-control" placeholder="e.g. Rameshwar Joshi" required value="Suresh Sharma">
+            </div>
+
+            <div class="form-group">
+              <label for="donor-phone">WhatsApp / Mobile Number *</label>
+              <input type="tel" id="donor-phone" class="form-control" placeholder="+91 98200 XXXXX" required value="+91 98200 45678">
+            </div>
+
+            <div class="form-group">
+              <label for="donor-email">Email Address (For Tax Receipt)</label>
+              <input type="email" id="donor-email" class="form-control" placeholder="devotee@example.com" value="suresh.sharma@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="donor-pan">PAN Card Number (For 80G Tax Exemption)</label>
+              <input type="text" id="donor-pan" class="form-control" placeholder="e.g. ABCDE1234F" maxlength="10" value="BZXPS4491K" style="text-transform: uppercase;">
+              <small style="color: #65a30d; font-size: 0.75rem;">Required by Income Tax Department to issue 80G certificate</small>
+            </div>
+          </div>
+
+          <!-- Vedic Sankalpa Grid -->
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="donor-gotra">Gotra</label>
+              <input type="text" id="donor-gotra" class="form-control" placeholder="e.g. Kashyapa, Bharadwaj" value="Kashyapa">
+            </div>
+
+            <div class="form-group">
+              <label for="donor-nakshatra">Birth Star (Nakshatra)</label>
+              <select id="donor-nakshatra" class="form-control">
+                <option value="Not Specified">Select Nakshatra (Optional)</option>
+                <option value="Ashwini">Ashwini</option>
+                <option value="Bharani">Bharani</option>
+                <option value="Krittika">Krittika</option>
+                <option value="Rohini" selected>Rohini</option>
+                <option value="Mrigashira">Mrigashira</option>
+                <option value="Ardra">Ardra</option>
+                <option value="Punarvasu">Punarvasu</option>
+                <option value="Pushya">Pushya</option>
+                <option value="Ashlesha">Ashlesha</option>
+                <option value="Magha">Magha</option>
+                <option value="Purva Phalguni">Purva Phalguni</option>
+                <option value="Uttara Phalguni">Uttara Phalguni</option>
+                <option value="Hasta">Hasta</option>
+                <option value="Chitra">Chitra</option>
+                <option value="Swati">Swati</option>
+                <option value="Vishakha">Vishakha</option>
+                <option value="Anuradha">Anuradha</option>
+                <option value="Jyeshtha">Jyeshtha</option>
+                <option value="Mula">Mula</option>
+                <option value="Purva Ashadha">Purva Ashadha</option>
+                <option value="Uttara Ashadha">Uttara Ashadha</option>
+                <option value="Shravana">Shravana</option>
+                <option value="Dhanishta">Dhanishta</option>
+                <option value="Shatabhisha">Shatabhisha</option>
+                <option value="Purva Bhadrapada">Purva Bhadrapada</option>
+                <option value="Uttara Bhadrapada">Uttara Bhadrapada</option>
+                <option value="Revati">Revati</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="donor-sankalpa">Sankalpa / Prayer Intention</label>
+              <input type="text" id="donor-sankalpa" class="form-control" placeholder="e.g. Good health of family, children education, wedding anniversary" value="Universal Peace, Family Prosperity & Spiritual Health">
+            </div>
+          </div>
+
+          <!-- Payment Options -->
+          <div style="background: #fffdf9; border: 1.5px solid var(--border-gold); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: 2rem;">
+            <label style="font-weight: 700; color: var(--sacred-maroon); display: block; margin-bottom: 0.75rem;">
+              Select Payment Method:
+            </label>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="radio" name="paymentMethod" value="UPI / QR Code" checked>
+                <strong>📱 UPI QR Code (GPay, PhonePe, Paytm, BHIM)</strong>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="radio" name="paymentMethod" value="Net Banking">
+                <span>🏦 Net Banking (All Indian Banks)</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="radio" name="paymentMethod" value="Debit / Credit Card">
+                <span>💳 Debit / Credit Card</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit CTA -->
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-gold btn-lg" style="font-size: 1.15rem; padding: 1rem 3rem;">
+              Proceed to Offer Seva &bull; <span id="summary-total">₹2,100</span> 🙏
+            </button>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;">
+              🔒 256-Bit SSL Encrypted &bull; 80G Tax Exemption Certificate Generated Immediately
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Donor Wall of Honor -->
+  <section class="section-padding" style="background: var(--bg-sand); border-top: 1px solid var(--border-gold);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Devotee Community</span>
+        <h2 class="section-title">Recent Devotees & Blessings</h2>
+        <div class="ornament-divider"><span>🪔</span></div>
+        <p class="section-subtitle">
+          Acknowledging the gracious hearts whose offerings nourish our pilgrims and sustain the eternal flame.
+        </p>
+      </div>
+
+      <div class="grid-3" id="live-donor-wall">
+        <!-- Rendered dynamically by donation.js from database -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Bank Wire Transfer Info -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="background: #fff; border: 2px solid var(--border-gold); border-radius: var(--radius-lg); padding: 2.5rem; max-width: 900px; margin: 0 auto; box-shadow: var(--shadow-sm);">
+        <h3 style="font-family: var(--font-display); color: var(--sacred-maroon); font-size: 1.4rem; margin-bottom: 0.75rem; text-align: center;">
+          🏛️ Direct NEFT / RTGS / IMPS Bank Transfer
+        </h3>
+        <p style="text-align: center; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.75rem;">
+          For large donations or direct temple trust accounts, you can transfer directly to our official State Bank of India account:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; background: #fffdf8; padding: 1.5rem; border-radius: var(--radius-sm); border: 1px dashed var(--accent-gold);">
+          <div>
+            <div style="font-size: 0.8rem; color: #78716c;">Account Name</div>
+            <div style="font-weight: 700; color: #1c1917;">Shree Siddhivinayak Mahalakshmi Dham Trust</div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; color: #78716c;">Bank & Branch</div>
+            <div style="font-weight: 700; color: #1c1917;">State Bank of India (Prabhadevi Branch)</div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; color: #78716c;">Account Number</div>
+            <div style="font-weight: 800; font-family: monospace; font-size: 1.1rem; color: #c2410c;">3089123456789</div>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; color: #78716c;">IFSC Code</div>
+            <div style="font-weight: 800; font-family: monospace; font-size: 1.1rem; color: #c2410c;">SBIN0001234</div>
+          </div>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 1rem;">
+          After direct transfer, please email your transaction reference to <strong>trust@siddhivinayakdham.org</strong> to receive your 80G Tax receipt.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Payment Modal (UPI QR Code Simulation) -->
+  <div class="modal-backdrop" id="payment-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div style="text-align: center;">
+        <span style="font-size: 2rem;">🕉️</span>
+        <h3 style="font-family: var(--font-display); color: var(--sacred-maroon); margin: 0.25rem 0;">
+          Scan & Pay via any UPI App
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">
+          GPay &bull; PhonePe &bull; Paytm &bull; BHIM &bull; Cred &bull; Amazon Pay
+        </p>
+      </div>
+
+      <div class="qr-code-box">
+        <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 0.5rem;">Amount to Pay:</div>
+        <div id="qr-modal-amount" style="font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 0.75rem;">
+          ₹2,100
+        </div>
+
+        <img id="upi-qr-image" class="qr-image" src="" alt="UPI Payment QR Code" width="200" height="200">
+
+        <div style="font-size: 0.82rem; color: #475569; margin-top: 0.5rem;">
+          UPI ID: <strong>temple.trust@sbi</strong>
+        </div>
+        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #b45309;">
+          ⏳ Session expires in: <strong id="payment-timer">04:59</strong>
+        </div>
+      </div>
+
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 0.75rem; font-size: 0.8rem; color: #166534; text-align: center; margin-bottom: 1.25rem;">
+        💡 <strong>Interactive Demo:</strong> Scan with your phone or click the simulation button below to trigger the verified payment and generate your official 80G receipt.
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <button class="btn btn-primary btn-lg" id="btn-confirm-payment">
+          ✅ Simulate Successful Payment
+        </button>
+        <button class="btn btn-outline-gold btn-modal-close">
+          Cancel & Return
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Official 80G Receipt Modal -->
+  <div class="modal-backdrop" id="receipt-modal">
+    <div class="modal-box" style="max-width: 720px;">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="receipt-container">
+        <!-- Rendered dynamically by donation.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="temple-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <span style="font-size: 2rem;">🕉️</span>
+            <div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: #fff;">SHREE SIDDHIVINAYAK</div>
+              <div style="font-size: 0.75rem; color: var(--accent-gold); letter-spacing: 1px;">MAHALAKSHMI DHAM TRUST</div>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #a8a29e;">
+            Official 80G Tax-exempt charitable trust. Reg No. MH-MUM-TR-2024/9871A.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Devotee Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="darshan.html">Darshan Timings</a></li>
+            <li><a href="pooja-booking.html">Online Poojas</a></li>
+            <li><a href="donation.html">Donation & Seva</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Administration</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Mandir</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="pushpa-bhandari-bhajan.html">Bhajan Ganga TV</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Helpline</h4>
+          <p style="font-size: 0.85rem; color: #d6d3d1;">
+            📞 +91 (022) 2430-8911<br>
+            📧 trust@siddhivinayakdham.org<br>
+            Siddhivinayak Marg, Prabhadevi, Mumbai
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Shree Siddhivinayak Mahalakshmi Dham Trust. All Rights Reserved.</div>
+        <div><a href="#" class="js-ring-bell" style="color: #a8a29e;">Ring Sacred Bell 🔔</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating 3D Interactive Temple Bell -->
+  <div class="floating-3d-bell js-ring-bell" id="floating-3d-bell" title="Click to Ring Temple Bell">
+    <div class="bell-tooltip">🔔 Ring 3D Temple Bell</div>
+    <div class="bell-chain"></div>
+    <div class="bell-body-3d">🔔</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/database.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/donation.js"></script>
+  <script src="js/temple3d.js"></script>
+</body>
+</html>
